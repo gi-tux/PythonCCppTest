@@ -33,8 +33,11 @@ exampleCPP.py: exampleCPP.i
 example1.o: example1.cpp
 	g++ -fPIC -c example1.cpp exampleCPP_wrap.cpp -I/usr/include/python2.7
 
-exampleCPP_wrap.o: exampleCPP_wrap.cpp
-	g++ -fPIC -c example1.cpp exampleCPP_wrap.cpp -I/usr/include/python2.7
+example2.o: example2.cpp
+	g++ -fPIC -c example2.cpp exampleCPP_wrap.cpp -I/usr/include/python2.7
 
-_exampleCPP.so: example1.o exampleCPP_wrap.o
-	g++ -shared exampleCPP_wrap.o example1.o -o _exampleCPP.so
+exampleCPP_wrap.o: exampleCPP_wrap.cpp
+	g++ -fPIC -c example1.cpp example2.cpp exampleCPP_wrap.cpp -I/usr/include/python2.7
+
+_exampleCPP.so: example1.o example2.o exampleCPP_wrap.o
+	g++ -shared exampleCPP_wrap.o example1.o example2.o -o _exampleCPP.so

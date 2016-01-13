@@ -24,7 +24,7 @@ example2::example2()
 	counter = 0;
 }
 
-virtual example2::~example2()
+example2::~example2()
 {
 	counter = 0;
 }
