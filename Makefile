@@ -6,14 +6,16 @@ clean:
 	rm -f exampleC_wrap.o
 	rm -f exampleC_wrap.c
 	rm -f exampleC.py
-	rm -f exampleC.pyc
+	#rm -f exampleC.pyc
 	rm -f _exampleCPP.so
 	rm -f example1.o
 	rm -f exampleCPP_wrap.o
 	rm -f exampleCPP_wrap.cpp
 	rm -f exampleCPP.py
-	rm -f exampleCPP.pyc
+	#rm -f exampleCPP.pyc
 	rm -f example2.o
+	#rm -f fibo.pyc
+	#rm -f world.pyc
 
 exampleC.py: exampleC.i
 	swig -python exampleC.i

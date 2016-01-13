@@ -31,3 +31,5 @@
 .anjuta*
 *.anjuta
 .ropeproject/*
+
+*.pyc
